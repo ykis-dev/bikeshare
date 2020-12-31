@@ -8,7 +8,7 @@ CITY_DATA = { 'chicago': '~/Udacity/bikeshare/chicago.csv',
 
 MONTHS = ['january', 'february', 'march', 'april', 'may', 'june']
 WEEKDAYS = ['monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday']
-LINE_LEN = 90
+SEP_LEN = 100
 
 
 
@@ -342,12 +342,12 @@ def seconds_to_HMS_str(total_seconds):
 
 
 def print_processing_time(start_time):
-    time_str = "[... %s seconds]" % round((time.time() - start_time), 3)
-    print(time_str.rjust(LINE_LEN))
-    print_line('-')
+    time_str = "[This took %s seconds]" % round((time.time() - start_time), 3)
+    print(time_str.rjust(SEP_LEN))
+    print_line('=')
 
 # print long string with repeating char, used to separate sections of output
-print_line = lambda char: print(char[0] * LINE_LEN)
+print_line = lambda char: print(char[0] * SEP_LEN)
 
 def main():
     while True:
