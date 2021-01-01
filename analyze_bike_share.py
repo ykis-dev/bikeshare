@@ -230,7 +230,7 @@ def get_month_filter():
         try:
             month = input("    Select the month from January to June( 1 thru 6) or 'a' for all:  ")
         except:
-            print("        >>>>  Pls try again! Valid inputs only:  1 thru 6 or a a")
+            print("        >>>>  Pls try again! Valid inputs only:  1 thru 6 or a")
             continue
 
         if month == 'a':
@@ -351,6 +351,8 @@ print_line = lambda char: print(char[0] * SEP_LEN)
 
 def main():
     while True:
+        proceed = 'yes'
+        stop = 'no'
         city, month, day = get_filters()
         df = load_data(city, month, day)
 
@@ -364,4 +366,4 @@ def main():
             break
 
 if __name__ == "__main__":
-    main()
+	main()
